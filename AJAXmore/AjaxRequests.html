@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning AJAX Is Fun!!</title>
+</head>
+<body>
+    
+
+    <script>
+    
+    window.onload = function(){
+
+        //CREATE AN XMLHTTPRequest Object
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function(){
+        
+            if(this.readyState == 4 && this.status == 200){
+
+                    //ok
+                    console.log(JSON.parse(this.responseText));
+
+            }
+
+        }
+
+        xhr.open('GET','Tweets.json',true);
+
+        // xhr.onload = function(){
+
+        //     if(this.status == 200){
+
+        //     }
+        // }
+
+        //SEND THE REQUEST TO GRAB THE DATA FROM THE SERVER
+
+        xhr.send();
+
+        }
+        
+    </script>
+</body>
+</html>
