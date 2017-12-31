@@ -9,3 +9,5 @@ console.table({a:1,b:2});
 console.error('This is some error');
 console.clear();
 console.warning('This is a warning');
+console.time('Hello');
+console.timeEnd();
