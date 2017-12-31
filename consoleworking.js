@@ -8,3 +8,4 @@ console.log({a:1,b:2});
 console.table({a:1,b:2});
 console.error('This is some error');
 console.clear();
+console.warning('This is a warning');
