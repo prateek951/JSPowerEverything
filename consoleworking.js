@@ -9,5 +9,13 @@ console.table({a:1,b:2});
 console.error('This is some error');
 console.clear();
 console.warning('This is a warning');
-console.time('Hello');
-console.timeEnd();
+console.time('Hello');  //Timer starts here
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.timeEnd('Hello');   //Timer ends here...Here we compute how much time the console took to log on all the statements
