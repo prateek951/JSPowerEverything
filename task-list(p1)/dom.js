@@ -7,7 +7,7 @@
 
 //Examining the document object
 
-let val;
+// let val;
 
 //val = document;
 //val = document.all; //To get the html collection
@@ -144,8 +144,8 @@ let val;
 // val = list.lastElementChild;     //returns the last actual element node
 //val = list.childElementCount;     //5 is the count of the child elements
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item');
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item');
 
 //get the parent node
 // val = listItem.parentNode;
@@ -158,3 +158,39 @@ const listItem = document.querySelector('li.collection-item');
 // val = listItem.previousSibling; //returns the text node
 // val = listItem.previousElementSibling; //returns the actual node of the element
 
+//REPLACE ELEMENT
+//Create an element
+//Replace h5 with h2
+// const heading = document.createElement('h2');
+// const replaceMe = document.querySelector('h5#task-title');
+// const parent1 = replaceMe.parentElement;
+// heading.id = 'task-title';
+// heading.appendChild(document.createTextNode('Task List'));
+// parent1.replaceChild(heading,replaceMe);
+
+//Remove an element
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelector('ul.collection');
+// lis.forEach(li => li.remove())       //This confirms that lis is a nodelist
+
+// list.removeChild(lis[0]);
+
+//classes and attr
+// const firstLi = document.querySelector('li:first-child');
+// const link = firstLi.children[0];
+// let val;
+
+// val = link.className;
+// val = link.classList;
+//adding a class to the classlist of an element
+// link.classList.add('test');
+// val = link;
+//remove a class from the classlist of an element
+// link.classList.remove('test');
+
+//Attributes
+// val = link.setAttribute('href','http://www.google.com');
+// val = link.hasAttribute('href');
+// link.setAttribute('title','Google');
+// val = link.removeAttribute('title');
+// console.log(val)
