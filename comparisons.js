@@ -66,3 +66,22 @@ console.log(id === 100 ? 'Correct' : 'Incorrect');
 
 //CURLY BRACES IS OPTIONAL
 
+//Switch statements
+const color = 'yellow';
+switch (color) {
+    case 'green':
+        console.log('Color is green');
+        break;
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'yellow':
+        console.log('Color is yellow');
+        break;
+    case 'pink':
+        console.log('Color is pink');
+        break;
+    default:
+        console.log('Color is something else');
+}
+
