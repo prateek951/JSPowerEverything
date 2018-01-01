@@ -102,20 +102,59 @@ let val;
 //document.querySelectorAll() is same as above ones but it returns the nodelist
 //Here no need to convert the nodelist to array as was in above cases with HTML collection
 
-const items = document.querySelectorAll('li');
-console.log(items);
-items.forEach(item => console.log(item));
+// const items = document.querySelectorAll('li');
+// console.log(items);
+// items.forEach(item => console.log(item));
 
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
-liOdd.forEach(item  => item.style.background = 'red');
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
+// liOdd.forEach(item  => item.style.background = 'red');
 
-for (let index = 0; index < liEven.length; index++) {
-    liEven[index].style.background = 'green';
+// for (let index = 0; index < liEven.length; index++) {
+//     liEven[index].style.background = 'green';
     
-}
+// }
 
+//Traversing the dom
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item');
 
+//Getting the children and parent nodes of the ul
+//childNodes return the list of all the child nodes as a nodelist
+// val = list.childNodes;
+// val = list.childNodes[0]
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[0].nodeType;
 
+//1 - Element
+//2 - Attribute (deprecated)
+//3 - Text Node
+//8 - Comment
+//9 - Document itself
+//10 - Doctype
+//Get children element nodes
+//children is generally used more than childNodes
+//val = list.children;    //returns the HTML collection of all the elements
+//val = list.children[0].textContent = 'Hello';
+//Children of children
+// val = list.children[1].children;
+// val = list.firstChild;  //returns the text node of the first element
+// val = list.firstElementChild; //return the actual element node
+//val = list.lastChild; //returns the text node of the last element
+// val = list.lastElementChild;     //returns the last actual element node
+//val = list.childElementCount;     //5 is the count of the child elements
 
-console.log(val);
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item');
+
+//get the parent node
+// val = listItem.parentNode;
+// val = listItem.parentElement;
+// val = listItem.parentElement.parentElement.parentElement;
+//get the next sibling
+// val = listItem.nextSibling; //returns the text node
+// val = listItem.nextElementSibling;  //returns the actual node of the element
+///get the previous sibling
+// val = listItem.previousSibling; //returns the text node
+// val = listItem.previousElementSibling; //returns the actual node of the element
+
