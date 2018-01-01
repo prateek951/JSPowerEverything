@@ -194,4 +194,54 @@
     //     document.getElementById('output').innerHTML = '<h3>'+ e.target.value +'</h3>';
     // }
 
-    
+var form = document.getElementById('addForm');
+var list = document.getElementById('items');
+var filter = document.getElementById('filter');
+
+filter.addEventListener('keypress',filterItems);
+list.addEventListener('click', removeItem);
+form.addEventListener('submit', addItem);
+
+function addItem (e){
+    e.preventDefault();
+    var newItem = document.getElementById('item').value;
+    //create the li element for the new item
+    var li = document.createElement('li');
+    //Associate a className to the li element
+    li.className = 'list-group-item';
+    //Complete the li
+    li.appendChild(document.createTextNode(newItem));
+    //Create a delete button element
+    var deleteBtn = document.createElement('button');
+    //Associate classes with the deleteBtn
+    deleteBtn.className = 'btn btn-danger btn-sm float-right';
+    deleteBtn.innerText = 'X';
+    li.appendChild(deleteBtn);
+    list.appendChild(li);    
+}
+
+function removeItem(e){
+    if(e.target.classList.contains('.delete')){
+        if(confirm('Are you sure ?')){
+            var li = e.target.parentElement;
+            list.removeChild(li);
+        }
+    }
+}
+
+function filterItems(e){
+   //convert everything to lowercase
+    var text = e.target.value.toLowerCase();
+    //primer //match for primer say
+    var items = list.getElementsByTagName('li');
+    // items is a html collection
+    //Convert to array first
+    Array.from(items).forEach(item => {
+        var itemName = item.firstChild.textContent;
+        if(itemName.toLowerCase().indexOf(text) != -1){
+            item.style.display = 'block';
+        }else{
+            item.style.display = 'none';
+        }
+    })
+}
