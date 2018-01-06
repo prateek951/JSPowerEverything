@@ -194,3 +194,28 @@
 // link.setAttribute('title','Google');
 // val = link.removeAttribute('title');
 // console.log(val)
+
+//Mouse Events
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
+
+//click
+// clearBtn.addEventListener('click',runEvent);
+//dblclick
+// clearBtn.addEventListener('dblclick',runEvent);
+//Event handler
+//mousedown
+// clearBtn.addEventListener('mousedown',runEvent);
+// clearBtn.addEventListener('mouseup',runEvent);
+// card.addEventListener('mouseenter',runEvent);
+//card.addEventListener('mouseleave',runEvent);
+//mouseover
+// card.addEventListener('mouseover',runEvent)
+//mouseout
+// card.addEventListener('mouseout',runEvent);
+
+// function runEvent(e){
+//     console.log(`Event type : ${e.type}`);
+// }
+

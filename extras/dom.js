@@ -220,15 +220,20 @@ function addItem (e){
     list.appendChild(li);    
 }
 
+// function removeItem(e){
+//     if(e.target.classList.contains('.delete')){
+//         if(confirm('Are you sure ?')){
+//             var li = e.target.parentElement;
+//             list.removeChild(li);
+//         }
+//     }
+// }
 function removeItem(e){
+    e.preventDefault();
     if(e.target.classList.contains('.delete')){
-        if(confirm('Are you sure ?')){
-            var li = e.target.parentElement;
-            list.removeChild(li);
-        }
+        e.target.parentElement.remove();
     }
 }
-
 function filterItems(e){
    //convert everything to lowercase
     var text = e.target.value.toLowerCase();
@@ -245,3 +250,4 @@ function filterItems(e){
         }
     })
 }
+
